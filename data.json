@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "sku": "315BFV",
+        "marca": "LONGVIE",
+        "detalle": "Calefon 14 Litros Blanco c/Sensor GN",
+        "precio": 75899,
+        "imagen": "./images/Calefon_Volvan_14lts_Gas_natural.jpg"
+    },
+    {
+        "id": 2,
+        "sku": "F5022UK6",
+        "marca": "SAMSUNG",
+        "detalle": "Smart Tv 50' 4K UHD Netflix Youtube Amazon Feelnology",
+        "precio": 99999,
+        "imagen": "./images/Smart_Tv_50_4K_UHD.jpg"
+    },
+    {
+        "id": 3,
+        "sku": "FM18B29AM211",
+        "marca": "MTB",
+        "detalle": "Bicicleta Mtb Rodado 29 Aluminio Full Shimano Altus Frenos a Disco Battle",
+        "precio": 128299,
+        "imagen": "./images/Bicicleta_MTB_Rodado_29_Aluminio.jpg"
+    },
+    {
+        "id": 4,
+        "sku": "BCAT21VW",
+        "marca": "ATMA",
+        "detalle": "Balanza De Cocina Digital Vidrio Templado 3KG",
+        "precio": 3999,
+        "imagen": "./images/Balanza_de_Cocina_Digital_Atma_Vidrio_Templado.jpg"
+    },
+    {
+        "id": 5,
+        "sku": "CA8133N",
+        "marca": "LILIANA",
+        "detalle": "Cafetera Blanca 1,5lts Filtro Desmontable",
+        "precio": 11499,
+        "imagen": "./images/Cafetera_Blanca_1.5lts_Filtro_desmontable.jpg"
+    },
+    {
+        "id": 6,
+        "sku": "DF3900B",
+        "marca": "ELETROLUX",
+        "detalle": "Heladera con freezer Blanca 345lts No Frost Electrolux",
+        "precio": 235299,
+        "imagen": "./images/Heladera_con_freezer_Blanca_345lts_No_Frost_Electrolux.jpg"
+    },
+    {
+        "id": 7,
+        "sku": "DORAL140-PILLOW",
+        "marca": "CANNON",
+        "detalle": "Colchón de Resortes Doral Pillow Top 140x190cm Jackard Cannon",
+        "precio": 122299,
+        "imagen": "./images/Colchón_de_Resortes_Doral_Pillow_Top_140x190cm_Jackard_Cannon.jpg"
+    },
+    {
+        "id": 8,
+        "sku": "13231B",
+        "marca": "LONGVIE",
+        "detalle": "Cocina Blanca 56cm Multigas Eficiencia energética AA Longvie",
+        "precio": 136499,
+        "imagen": "./images/Cocina_Blanca_56cm_Multigas_Eficiencia_energética_AA_Longvie.jpg"
+    },
+    {
+        "id": 9,
+        "sku": "CANDOR-BLACK-GE",
+        "marca": "ESCORIAL",
+        "detalle": "Cocina Candor Negra 50cm 4 Hornallas Gas Envasado Escorial",
+        "precio": 69999,
+        "imagen": "./images/Cocina_Candor_Negra_50cm_4_Hornallas_Gas_Envasado_Escorial.jpg"
+    },
+    {
+        "id": 10,
+        "sku": "SM-A336-AZUL",
+        "marca": "SAMSUNG",
+        "detalle": "Celular Liberado Samsung Galaxy A33 5G 6.4' 6GB 128GB Octa-Core Azul",
+        "precio": 144599,
+        "imagen": "./images/Celular_Liberado_Samsung_Galaxy_A33_5G_6.4_6GB_128GB_Octa-Core_Azul.jpg"
+    },
+    {
+        "id": 11,
+        "sku": "T3150",
+        "marca": "LONGVIE",
+        "detalle": "Termotanque de pie 150lts Multigas Longvie",
+        "precio": 117499,
+        "imagen": "./images/Termotanque_de_pie_150lts_Multigas_Longvie.jpg"
+    },
+    {
+        "id": 12,
+        "sku": "SHANKAR-160",
+        "marca": "GANI",
+        "detalle": "Colchón de Resortes Shankar Pocket 160X200 Gani",
+        "precio": 233199,
+        "imagen": "./images/Colchón_de_Resortes_Shankar_Pocket_160X200_Gani.jpg"
+    },
+    {
+        "id": 13,
+        "sku": "RED-C100",
+        "marca": "GANI",
+        "detalle": "Colchón de Resortes Red Spring Pillow Top 100X190X33 Gani",
+        "precio": 66199,
+        "imagen": "./images/Colchón_de_Resortes_Red_Spring_Pillow_Top_100X190X33_Gani.jpg"
+    },
+    {
+        "id": 14,
+        "sku": "L-16508",
+        "marca": "LONGVIE",
+        "detalle": "Lavarropas 6.5kg 800RPM Display Longvie",
+        "precio": 165999,
+        "imagen": "./images/Lavarropas_6.5kg_800RPM_Display_Longvie.jpg"
+    },
+    {
+        "id": 15,
+        "sku": "NEXT-609",
+        "marca": "DREAN",
+        "detalle": "Lavarropas Automático Drean Next 6kg 900rpm Clase A+",
+        "precio": 141599,
+        "imagen": "./images/Lavarropas_Automático_Drean_Next_6kg_900rpm_Clase_A+.jpg"
+    }
+]

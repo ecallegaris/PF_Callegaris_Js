@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+
+    <!--  BOOSTRAP CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--  Hoja de estilo -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+    <!-- (Componente offcanvas) Barras de navegación laterales ocultas en tu proyecto, carritos de compras -->
+    <div class="d-flex flex-column">
+        <div class="align-self-end">
+            <button id="btnOffcanvas" class="btn btn-light" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <img src="./images/carro_de_compras.png" alt="Bootstrap" width="25" height="25">
+            </button>
+        </div>
+    </div>
+
+    <!-- Carrito -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <!-- Titulo Carrito -->
+        <div class="offcanvas-header">  
+            <h4 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compras</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- Cuerpo Carrito -->
+        <div class="offcanvas-body offcanvas-size-xl" >
+            <div class="container col-sm-12">
+                <div class="alert alert-success" role="alert">
+                    No tenés productos en tu carrito de compras.
+                </div>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span id="total"></span>$;</p>
+                <!-- BOTONES carrito -->
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                <button id="boton-continuar" class="btn btn-success">Continuar</button>
+            </div>
+
+            <div id="row-compra">
+                <div
+                    class="container-envio col-sm-12 mt-5 mb-1 pt-1 pb-1 px-1 py-1 border border-light border-1 rounded-3">
+                    <div class="conten-envio">
+                        <p>¿Cómo entregamos tu compra?</p>
+                        <select id="tipo-entrega" class="form-select form-select-sm"
+                            aria-label="Ejemplo de .form-select-sm">
+                            <option selected>Seleccione el tipo de entrega</option>
+                            <option value="1">Envío a domicilio</option>
+                            <option value="2">Retiro en sucursal CASA CENTRAL, Mendoza 2799, Rosario</option>
+                            <option value="3">Retiro en sucursal SUR, Arijón 885, Rosario</option>
+                            <option value="4">Retiro en sucursal ARROYO SECO, San Martín 443, Arroyo Seco</option>
+                            <option value="5">Retiro en sucursal VILLA GOB. GALVEZ, San Martín 2082, Villa Gobernador
+                                Gálvez</option>
+                            <option value="6">Retiro en sucursal PEATONALCORDOBA, Córdoba 1164, Rosario</option>
+                        </select>
+                    </div>
+                </div>
+                <div
+                    class="container-contacto col-sm-12 mt-5 mb-1 pt-1 pb-1 px-1 py-1 border border-light border-1 rounded-3 ">
+                    <div class="conten-contacto">
+                        <!-- formulario de contacto en Bootstrap -->
+                        <p>Datos Personales</p>
+                        <form>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre
+                                    <span class="obligatorio" style="color: rgb(253, 0, 0);">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="nombre" name="nombre"
+                                    placeholder="Escribe tu nombre">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email
+                                    <span class="obligatorio" style="color: rgb(255, 0, 0);">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="email" name="email"
+                                    placeholder="Escribe tu email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="text" class="form-control" id="telefono" name="telefono"
+                                    placeholder="Escribe tu teléfono">
+                            </div>
+                            <div class="mb-3" id="dir-entrega">
+                                <label for="direccion" class="form-label">Dirección de entrega
+                                    <span class="obligatorio" style="color: rgb(255, 0, 0);">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="direccion" name="direccion"
+                                    placeholder="Escribe la dirección de entrega">
+                            </div>
+                            <!--Para un “botón de bloque” de ancho medio, se usa .col-6. Se centra horizontalmente con .mx-auto -->
+
+                            <p class="aviso">
+                                <span class="obligatorio" style="color:rgb(255, 0, 0);"> * </span> los campos son
+                                obligatorios.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container col-sm-4">
+                <button type="button" id="btn-aceptar-compra" class="btn btn-primary btn-block">ACEPTAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!--  CARRUSEL banner -->
+    <div class="container">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="./images/banner_1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./images/banner_2.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- BARRA de búsqueda -->
+    <nav class="navbar-busqueda bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand"></a>
+            <form class="d-flex" role="search">
+                <input id="caja-buscar" class="form-control me-2" type="search" placeholder="Filtrar por marca"
+                    aria-label="Search">
+                <button id="boton-buscar" class="btn btn-outline-success" type="button">Buscar</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Suscripción -->
+    <div class="container-suscripcion">
+        <div class="conten-suscripcion">
+            <h2>Suscribete a nuestro newsletter:</h2>
+            <form action="#">
+                <input type="email" class="caja-email" placeholder="Introduce tu correo electrónico">
+                <input type="submit" value="suscribir" class="btn-sub">
+            </form>
+        </div>
+    </div>
+
+    <!-- CARDS -->
+    <div id="container" class="container p-4 justify-content-center">
+        <div class="row">
+            <!-- Elementos generados a partir de     JSON -->
+            <div id="items" class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"></div>
+        </div>
+    </div>
+
+    <!--  JQUERY JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!--  BOOSTRAP JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <!--  JAVASCRIPT -->
+    <script src="./js/JavaScript.js"></script>
+    <!--  SWEETALERT JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+<!-- footer -->
+<footer class="footerBg text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a href="#" target="_blank"><img src="./images/icons8-instagram-48.png"></a>
+            <!-- Instagram -->
+            <a href="#" target="_blank"><img src="./images/icons8-facebook-48.png"></a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/341155636125?text=¡Estoy+interesado!" target="_blank"><img
+                    src="./images/icons8-whatsapp-48.png"></a>
+            <!-- Home -->
+            <a href="https://goo.gl/maps/h3A97WehWaVuWugr9" target="_blank"><img src="./images/icons8-casa-48.png"></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-dark" href="#">ecallegaris.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+
+</html>
